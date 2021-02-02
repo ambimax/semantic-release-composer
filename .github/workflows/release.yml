@@ -6,7 +6,7 @@ on:
       - main
       - next
       - beta
-      - '*.x' # maintenance releases branches
+      - "*.x" # maintenance releases branches
 
 jobs:
   release:
@@ -20,9 +20,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 12
+          registry-url: https://npm.pkg.github.com
+          scope: "@ambimax"
+          always-auth: true
+
       - uses: bahmutov/npm-install@v1
       - run: npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.AMBIMAX_GITHUB_RELEASE_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.AMBIMAX_NPM_REGISTRY_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
