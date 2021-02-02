@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/ambimax/semantic-release-composer/compare/v1.0.1...v1.0.2) (2021-02-02)
+
+
+### Bug Fixes
+
+* add release to github ([4694e03](https://github.com/ambimax/semantic-release-composer/commit/4694e03a6052a4b575e853dd320b43b8879aa906))
+
 ## [1.0.1](https://github.com/ambimax/semantic-release-composer/compare/v1.0.0...v1.0.1) (2021-02-02)
 
 
