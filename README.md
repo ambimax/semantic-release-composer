@@ -67,3 +67,7 @@ The plugin can be configured in the
   ]
 }
 ```
+
+## Author
+
+- [Tobias Schifftner](https://www.twitter.com/tschifftner)
