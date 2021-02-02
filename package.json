@@ -20,6 +20,9 @@
     "url": "https://github.com/ambimax/semantic-release-composer.git"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@airbnb/config-babel": "^3.1.0",
     "@airbnb/config-eslint": "^3.1.0",
