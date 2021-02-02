@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ambimax/semantic-release-composer/compare/v1.0.0...v1.0.1) (2021-02-02)
+
+
+### Bug Fixes
+
+* make package public ([8879a51](https://github.com/ambimax/semantic-release-composer/commit/8879a515133d256f700c013d721abc9df92bca0d))
+
 # 1.0.0 (2021-02-02)
 
 
