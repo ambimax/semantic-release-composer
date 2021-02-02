@@ -15,13 +15,24 @@
     "prettier": "nimbus prettier"
   },
   "author": "Tobias Schifftner <ts@ambimax.de> (https://www.twitter.com/tschifftner)",
-  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ambimax/semantic-release-composer.git"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@airbnb/config-babel": "^3.1.0",
     "@airbnb/config-eslint": "^3.1.0",
     "@airbnb/config-jest": "^3.0.2",
     "@airbnb/config-prettier": "^3.1.0",
     "@airbnb/nimbus": "^3.1.4",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.2.0",
+    "@semantic-release/npm": "^7.0.10",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "semantic-release": "^17.3.7",
     "stream-buffers": "^3.0.2"
   },
   "nimbus": {
@@ -36,7 +47,9 @@
       "node": true
     },
     "eslint": {
-      "ignore": ["*.md"]
+      "ignore": [
+        "*.md"
+      ]
     }
   },
   "dependencies": {
