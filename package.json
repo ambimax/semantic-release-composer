@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "yarn run jest:coverage",
+    "test:ci": "yarn run jest && yarn run nimbus eslint",
     "prepare": "nimbus create-config",
     "build": "nimbus babel && nimbus babel --esm",
     "lint": "nimbus eslint --fix .",
@@ -33,6 +34,9 @@
     "settings": {
       "library": true,
       "node": true
+    },
+    "eslint": {
+      "ignore": ["*.md"]
     }
   },
   "dependencies": {
