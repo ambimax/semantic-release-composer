@@ -1,0 +1,41 @@
+{
+  "name": "@ambimax/nimbus",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "yarn run jest:coverage",
+    "prepare": "nimbus create-config",
+    "build": "nimbus babel && nimbus babel --esm",
+    "lint": "nimbus eslint --fix .",
+    "posttest": "yarn run lint",
+    "jest": "NODE_ENV=test TZ=UTC nimbus jest",
+    "jest:coverage": "yarn run jest --coverage",
+    "prettier": "nimbus prettier"
+  },
+  "author": "Tobias Schifftner <ts@ambimax.de> (https://www.twitter.com/tschifftner)",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@airbnb/config-babel": "^3.1.0",
+    "@airbnb/config-eslint": "^3.1.0",
+    "@airbnb/config-jest": "^3.0.2",
+    "@airbnb/config-prettier": "^3.1.0",
+    "@airbnb/nimbus": "^3.1.4",
+    "stream-buffers": "^3.0.2"
+  },
+  "nimbus": {
+    "drivers": [
+      "eslint",
+      "jest",
+      "prettier",
+      "babel"
+    ],
+    "settings": {
+      "library": true,
+      "node": true
+    }
+  },
+  "dependencies": {
+    "@semantic-release/error": "^2.2.0"
+  }
+}
