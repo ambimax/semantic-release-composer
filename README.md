@@ -21,6 +21,7 @@ The plugin can be configured in the
 
 ```json
 {
+  "tagFormat": "${version}",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
