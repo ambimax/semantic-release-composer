@@ -1,4 +1,5 @@
 const fs = require('fs');
+const childProcess = require('child_process');
 const SemanticReleaseError = require('@semantic-release/error');
 
 let verified;
@@ -49,6 +50,13 @@ async function prepare(pluginConfig, context) {
   fs.writeFileSync(composerJsonFile, JSON.stringify(data, null, 4));
 
   logger.log('Prepared composer.json');
+
+  const composerLockFile = `${cwd}/composer.lock`;
+  if (fs.existsSync(composerLockFile)) {
+    // update lock file with new version
+    logger.log('Updating version %s in %s ', version, composerLockFile);
+    childProcess.execSync('composer update --lock');
+  }
 }
 
 module.exports = { verifyConditions, prepare };

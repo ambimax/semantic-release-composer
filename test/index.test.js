@@ -1,5 +1,6 @@
 const { WritableStreamBuffer } = require('stream-buffers');
 const fs = require('fs');
+const childProcess = require('child_process');
 
 const composerJsonContent = JSON.stringify({
   name: 'ambimax/some-composer-module',
@@ -89,6 +90,8 @@ describe('prepare step', () => {
     const { plugin, context } = setupBefore();
     jest.spyOn(fs, 'existsSync').mockReturnValue(true);
     jest.spyOn(fs, 'readFileSync').mockReturnValue(composerJsonContent);
+    jest.spyOn(childProcess, 'execSync').mockReturnValue(true);
+
     const finalJson = jest.spyOn(fs, 'writeFileSync');
     finalJson.mockImplementation();
     await plugin.prepare(null, context);
