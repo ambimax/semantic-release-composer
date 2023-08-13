@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { exec } = require("child_process");
+const { execSync } = require("child_process");
 const SemanticReleaseError = require('@semantic-release/error');
 
 let verified;
@@ -54,9 +54,9 @@ async function prepare(pluginConfig, context) {
   const composerLockFile = `${cwd}/composer.lock`;
   if (fs.existsSync(composerLockFile)) {
     // update lock file with new version
-    logger.log('Updating %s for version %s ', composerJsonFile, version);
+    logger.log('Updating %s for version %s ', composerLockFile, version);
 
-    exec('composer update --lock', (error, stdout, stderr) => {
+    execSync('composer update --lock', (error, stdout, stderr) => {
       if (error) {
         logger.error(`composer.lock clould not be updated: ${error.message}`);
         return;
