@@ -3,10 +3,10 @@
 [**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to update a
 [composer](https://getcomposer.org/) package for php.
 
-| Step               | Description                                  |
-| ------------------ | -------------------------------------------- |
-| `verifyConditions` | Verify the presence of a composer.json file. |
-| `prepare`          | Update the `composer.json` version           |
+| Step               | Description                                                                |
+| ------------------ | -------------------------------------------------------------------------- |
+| `verifyConditions` | Verify the presence of a composer.json file.                               |
+| `prepare`          | Update the `composer.json` version & sync composer.lock file if it exists. |
 
 ## Install
 
