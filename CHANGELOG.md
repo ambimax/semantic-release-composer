@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ambimax/semantic-release-composer/compare/v1.0.2...v1.1.0) (2024-07-31)
+
+
+### Features
+
+* update composer.lock when composer.json is modified ([625853a](https://github.com/ambimax/semantic-release-composer/commit/625853a377a8844918120187fe3edc2e23e069a1))
+
 ## [1.0.2](https://github.com/ambimax/semantic-release-composer/compare/v1.0.1...v1.0.2) (2021-02-02)
 
 
